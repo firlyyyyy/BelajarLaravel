@@ -32,21 +32,18 @@ Untuk mengatur email verification, ikuti langkah-langkah berikut:
 1. Install Laravel Breeze:
    ```bash
    composer require laravel/breeze --dev
+   php artisan breeze:install
+   php artisan migrate
+   npm install
+   npm run dev
 
-2. php artisan breeze:install
+PADA BAGIAN MODEL USER.PHP:
+```bash
+    use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-3. php artisan migrate
-
-4. npm install
-
-5. npm run dev
-
-PADA BAGIAN MODEL USER.PHP
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-class User extends Authenticatable implements MustVerifyEmail
-{
-    // ...
-}
+    class User extends Authenticatable implements MustVerifyEmail
+    {
+        // ...
+    }
 
 DI TAMBAHKAN implements MustVerifyEmail
