@@ -38,12 +38,13 @@ Untuk mengatur email verification, ikuti langkah-langkah berikut:
    npm run dev
 
 PADA BAGIAN MODEL USER.PHP:
-```bash
+    ```bash
+    
     use Illuminate\Contracts\Auth\MustVerifyEmail;
 
     class User extends Authenticatable implements MustVerifyEmail
     {
         // ...
     }
-
+    
 DI TAMBAHKAN implements MustVerifyEmail
